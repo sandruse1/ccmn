@@ -1,0 +1,20 @@
+{
+  "webhookUrl": "http://9e9b60db.ngrok.io/bot",
+  "token": "NTMwZGZjMjItOTkwMC00NGFhLThjOGMtYWIxZTFjMzEzOGUyNDUyNjZjMGMtOWQz",
+  "port": 3000,
+  "siteId": "1513804707441",
+  "headerInputTimes": {
+    "today":"today",
+    "yesterday":"yesterday",
+    "lastweek":"lastweek",
+    "lastmonth":"lastmonth",
+    "rangeTime": ""
+  },
+  "proximityGraph":{
+    "today":"hourly/today",
+    "yesterday":"hourly/yesterday",
+    "lastweek":"daily/lastweek",
+    "lastmonth":"daily/lastmonth",
+    "rangeTime": ""
+  }
+}

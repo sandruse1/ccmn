@@ -1,0 +1,21 @@
+.collection {
+    background-color: #2b2e3b;
+    color: #74b1be;
+    border: none;
+    margin-bottom: 0;
+}
+.collection .collection-item:hover {
+    background-color: #2e3244 !important;
+}
+.collection .collection-item {
+    background-color: #2b2e3b;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.collection .collection-item i {
+    padding-right: 20px;
+}

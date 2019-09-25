@@ -1,0 +1,17 @@
+{
+  "siteId": "1513804707441",
+  "headerInputTimes": {
+    "today":"today",
+    "yesterday":"yesterday",
+    "lastweek":"lastweek",
+    "lastmonth":"lastmonth",
+    "rangeTime": ""
+  },
+  "proximityGraph":{
+    "today":"hourly/today",
+    "yesterday":"hourly/yesterday",
+    "lastweek":"daily/lastweek",
+    "lastmonth":"daily/lastmonth",
+    "rangeTime": ""
+  }
+}

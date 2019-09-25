@@ -1,0 +1,35 @@
+.map {
+    position: relative;
+    color: #000;
+    margin: 0 auto;
+}
+.user-icon {
+    position: absolute;
+}
+.current-user {
+    -webkit-animation: pulse 1.5s infinite;
+    color: green;
+}
+.search-user {
+    color: red;
+    -webkit-animation: pulse 1.5s infinite;
+}
+.setmap {
+    text-align: center;
+    padding: 40px 0;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}

@@ -1,0 +1,364 @@
+  HEADER INPUT
+  |  |  |  |
+ \|/\|/\|/\|/
+ 
+Total Visitors:
+------------------------
+Today - /api/presence/v1/kpisummary/today?siteId=1513804707441 (response.data.totalVisitorCount)
+Yesterday - /api/presence/v1/kpisummary/yesterday?siteId=1513804707441
+Last week - /api/presence/v1/kpisummary/lastweek?siteId=1513804707441
+Last month - /api/presence/v1/kpisummary/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/kpisummary?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+------------------------
+Average Dwell Time:
+------------------------
+Today - /api/presence/v1/kpisummary/today?siteId=1513804707441 (Math.round(response.data.averageDwell))
+Yesterday - /api/presence/v1/kpisummary/yesterday?siteId=1513804707441
+Last week - /api/presence/v1/kpisummary/lastweek?siteId=1513804707441
+Last month - /api/presence/v1/kpisummary/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/kpisummary?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+------------------------
+Peak Hour:
+------------------------
+Today -/api/presence/v1/kpisummary/today?siteId=1513804707441 ((response.data.peakSummary.peakHour + ':00') + '-' + (response.data.peakSummary.peakHour + 1) + ':00' )
+Yesterday - /api/presence/v1/kpisummary/yesterday?siteId=1513804707441
+Last week - /api/presence/v1/kpisummary/lastweek?siteId=1513804707441
+Last month - /api/presence/v1/kpisummary/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/kpisummary?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+------------------------
+Conversion Rate:
+------------------------
+Today - /api/presence/v1/kpisummary/today?siteId=1513804707441 (response.data.conversionRate + '%')
+Yesterday - /api/presence/v1/kpisummary/yesterday?siteId=1513804707441
+Last week - /api/presence/v1/kpisummary/lastweek?siteId=1513804707441
+Last month - /api/presence/v1/kpisummary/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/kpisummary?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+------------------------
+Top Device Maker:
+------------------------
+Today -/api/presence/v1/kpisummary/today?siteId=1513804707441 (response.data.topManufacturers.name)
+Yesterday - /api/presence/v1/kpisummary/yesterday?siteId=1513804707441
+Last week - /api/presence/v1/kpisummary/lastweek?siteId=1513804707441
+Last month - /api/presence/v1/kpisummary/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/kpisummary?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+------------------------
+Tomorrow: 
+------------------------
+visitors - /api//presence/v1/visitor/daily/lastweek?siteId=1513804707441
+connected - /api//presence/v1/connected/daily/lastweek?siteId=1513804707441
+passerby - /api//presence/v1/passerby/daily/lastweek?siteId=1513804707441
+------------------------
+
+   GRAPHS:
+  |  |  |  |
+ \|/\|/\|/\|/
+ 
+Proximity:
+---------------------------------------------------
+today: {"0": 46,"1": 40, "2": 40, "3": 38, "4": 36, "5": 35, ...}
+
+        passerby  - /api/presence/v1/passerby/hourly/today?siteId=1513804707441
+        visitors  - /api/presence/v1/visitor/hourly/today?siteId=1513804707441
+        connected - /api/presence/v1/connected/hourly/today?siteId=1513804707441
+        
+yesterday: {"0": 46,"1": 40, "2": 40, "3": 38, "4": 36, "5": 35, ...}
+
+        passerby  - /api/presence/v1/passerby/hourly/yesterday?siteId=1513804707441
+        visitors  - /api/presence/v1/visitor/hourly/yesterday?siteId=1513804707441
+        connected - /api/presence/v1/connected/hourly/yesterday?siteId=1513804707441
+        
+last week: { "2018-07-23": 502, "2018-07-24": 551, "2018-07-25": 574, "2018-07-26": 532 ...}
+
+        passerby  - /api/presence/v1/passerby/daily/lastweek?siteId=1513804707441
+        visitors  - /api/presence/v1/visitor/daily/lastweek?siteId=1513804707441
+        connected - /api/presence/v1/connected/daily/lastweek?siteId=1513804707441
+        
+last month:{ "2018-07-23": 502, "2018-07-24": 551, "2018-07-25": 574, "2018-07-26": 532 ...}
+
+        passerby  - /api/presence/v1/passerby/daily/lastmonth?siteId=1513804707441
+        visitors  - /api/presence/v1/visitor/daily/lastmonth?siteId=1513804707441
+        connected - /api/presence/v1/connected/daily/lastmonth?siteId=1513804707441
+        
+range time: { "2018-07-23": 502, "2018-07-24": 551, "2018-07-25": 574, "2018-07-26": 532 ...}
+
+        passerby  - /api/presence/v1/passerby/daily?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+        visitors  - /api/presence/v1/visitor/daily?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+        connected - /api/presence/v1/connected/daily?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+        
+        
+---------------------------------------------------
+Proximity Distribution:
+---------------------------------------------------
+
+From header input {totalPasserby, totalVisitors, totalConnected}
+
+---------------------------------------------------
+Dwell Time:
+---------------------------------------------------
+
+today: { "0": { "FIVE_TO_THIRTY_MINUTES": 327,  "THIRTY_TO_SIXTY_MINUTES": 13,  "ONE_TO_FIVE_HOURS": 6,
+                            "FIVE_TO_EIGHT_HOURS": 0, "EIGHT_PLUS_HOURS": 4 }, ...}
+
+        visitors  - /api/presence/v1/dwell/hourly/today?siteId=1513804707441
+        
+yesterday:{ "0": { "FIVE_TO_THIRTY_MINUTES": 327,  "THIRTY_TO_SIXTY_MINUTES": 13,  "ONE_TO_FIVE_HOURS": 6,
+                            "FIVE_TO_EIGHT_HOURS": 0, "EIGHT_PLUS_HOURS": 4 }, ...}
+
+        visitors  - /api/presence/v1/dwell/hourly/yesterday?siteId=1513804707441
+        
+last week: { "2018-05-01": { "FIVE_TO_THIRTY_MINUTES": 327,  "THIRTY_TO_SIXTY_MINUTES": 13,  "ONE_TO_FIVE_HOURS": 6,
+                            "FIVE_TO_EIGHT_HOURS": 0, "EIGHT_PLUS_HOURS": 4 }, ...}
+
+        visitors  - /api/presence/v1/dwell/daily/lastweek?siteId=1513804707441
+
+last month:{ "2018-05-01": { "FIVE_TO_THIRTY_MINUTES": 327,  "THIRTY_TO_SIXTY_MINUTES": 13,  "ONE_TO_FIVE_HOURS": 6,
+                            "FIVE_TO_EIGHT_HOURS": 0, "EIGHT_PLUS_HOURS": 4 }, ...}
+
+        visitors  - /api/presence/v1/dwell/daily/lastmonth?siteId=1513804707441
+        
+range time: { "2018-05-01": { "FIVE_TO_THIRTY_MINUTES": 327,  "THIRTY_TO_SIXTY_MINUTES": 13,  "ONE_TO_FIVE_HOURS": 6,
+                            "FIVE_TO_EIGHT_HOURS": 0, "EIGHT_PLUS_HOURS": 4 }, ...}
+
+        visitors  - /api/presence/v1/dwell/daily?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+        
+
+---------------------------------------------------
+Dwell Time Distribution:
+---------------------------------------------------
+{
+    "FIVE_TO_THIRTY_MINUTES": 3038,
+    "THIRTY_TO_SIXTY_MINUTES": 155,
+    "ONE_TO_FIVE_HOURS": 57,
+    "FIVE_TO_EIGHT_HOURS": 14,
+    "EIGHT_PLUS_HOURS": 28
+}
+
+today - /api/presence/v1/dwell/count/today?siteId=1513804707441
+yesterday - /api/presence/v1/dwell/count/yesterday?siteId=1513804707441
+last week - /api/presence/v1/dwell/count/lastweek?siteId=1513804707441
+last month - /api/presence/v1/dwell/count/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/dwell/count?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+
+---------------------------------------------------
+Repeat Visitors:
+---------------------------------------------------
+
+{ "0": { "DAILY": 43, "WEEKLY": 3,  "OCCASIONAL": 0,  "FIRST_TIME": 0, "YESTERDAY": 46  }, ...}
+
+today - /api/presence/v1/repeatvisitors/hourly/today?siteId=1513804707441
+yesterday - /api/presence/v1/repeatvisitors/hourly/yesterday?siteId=1513804707441
+
+{ "2018-05-01": {"DAILY": 137, "WEEKLY": 183,"OCCASIONAL": 21,"FIRST_TIME": 9,"YESTERDAY": 151}, ...}
+
+last week - /api/presence/v1/repeatvisitors/daily/lastweek?siteId=1513804707441
+last month - /api/presence/v1/repeatvisitors/daily/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/repeatvisitors/daily?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+
+
+---------------------------------------------------
+Repeat Visitors Distribution:
+---------------------------------------------------
+
+{"DAILY": 243,"WEEKLY": 108,"OCCASIONAL": 16,"FIRST_TIME": 16,"YESTERDAY": 268}
+
+today - /api/presence/v1/repeatvisitors/count/today?siteId=1513804707441
+yesterday - /api/presence/v1/repeatvisitors/count/yesterday?siteId=1513804707441
+range time - /api/presence/v1/repeatvisitors/count?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+
+---------------------------------------------------
+Daily Correlation Users by Connected Users:
+---------------------------------------------------
+
+{    "0": 42,    "1": 36,    "2": 36,    "3": 34, ... }
+
+today - /api/presence/v1/connected/hourly/today?siteId=1513804707441
+yesterday - /api/presence/v1/connected/hourly/yesterday?siteId=1513804707441
+
+{ "2018-07-22": 349, "2018-07-23": 463, ... }
+
+last week - /api/presence/v1/connected/daily/lastweek?siteId=1513804707441
+last month - /api/presence/v1/connected/daily/lastmonth?siteId=1513804707441
+range time - /api/presence/v1/connected/daily?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+
+---------------------------------------------------
+Daily Correlation visitors Dwell Time by Dwell Level Average:
+---------------------------------------------------
+{
+    "FIVE_TO_THIRTY_MINUTES": 3.2196261682242993,
+    "THIRTY_TO_SIXTY_MINUTES": 42.65217391304348,
+    "ONE_TO_FIVE_HOURS": 114,
+    "EIGHT_PLUS_HOURS": 882.25
+}
+
+today - /api/presence/v1/dwell/averagebylevel/today?siteId=1513804707441
+yesterday - /api/presence/v1/dwell/averagebylevel/yesterday?siteId=1513804707441
+last week - /api/presence/v1/dwell/averagebylevel/lastweek?siteId=1513804707441
+last month - /api/presence/v1/dwell/averagebylevel/lastmonth?siteId=1513804707441
+
+{ "2018-05-01": {"FIVE_TO_THIRTY_MINUTES": 2.941358024691358,"EIGHT_PLUS_HOURS": 1431.5,
+                "ONE_TO_FIVE_HOURS": 153.5,"THIRTY_TO_SIXTY_MINUTES": 40.4375}, ... }
+
+range time - /api/presence/v1/dwell/dailyaverage?siteId=1513804707441&startDate=2018-05-01&endDate=2018-06-01
+---------------------------------------------------
+
+
+
+   Locations :
+  |  |  |  |
+ \|/\|/\|/\|/
+ 
+ axios.create({
+    baseURL: 'https://cisco-cmx.unit.ua/api',
+    headers: {
+        Accept: '*/*',
+        'Authorization': "Basic " + new Buffer('RO' + ":" + 'just4reading').toString("base64")
+    },
+    crossdomain: true
+})
+ 
+ get all maps :
+ 
+ /api/config/v1/maps -> 
+ 
+ {
+    "version": 0,
+    "campuses": [
+        {
+            "objectVersion": 0,
+            "name": "UNIT",
+            "dimension": {
+                "length": 0,
+                "width": 0,
+                "height": 0,
+                "offsetX": 0,
+                "offsetY": 0,
+                "unit": "FEET"
+            },
+            "image": null,
+            "buildingList": [],
+            "aesUid": 1513804707441,
+            "aesUidString": "1513804707441",
+            "members": null
+        }
+    ]
+}
+
+let i = 0;
+response.data.campuses.forEach(function (el) {
+if (el.buildingList.length > 0) {
+    self.maps.push({
+        floors: el.buildingList[i].floorList,
+        name: el.buildingList[i].hierarchyName,
+    });
+    i++
+}
+});
+for (let i = 0; i < self.maps[0].floors.length; i++) {
+    self.retrieveFloorImage(self.maps[0].floors[i])
+}
+
+retrieveFloorImage(floor) {
+                let self = this;
+                CMX.get('/config/v1/maps/imagesource/' + floor.image.imageName, {responseType: 'arraybuffer'})
+                    .then(async function (response) {
+                        let imageType = response.headers['content-type'];
+                        let base64 = new Buffer(response.data).toString('base64');
+                        let dataURI = 'data:' + imageType + ';base64,' + base64;
+                        await self.floors.push({
+                            imageData: dataURI,
+                            info: floor,
+                        });
+                        await self.floors.sort(function (a, b) {
+                            return a.info.floorNumber - b.info.floorNumber;
+                        });
+                        if (self.floors.length === self.maps[0].floors.length) {
+                            self.showMap(self.floors[0])
+                        }
+                    })
+                    .catch(e => {
+                        console.log(e)
+                    })
+            },
+            
+            
+get users - api/location/v2/clients
+
+{
+        "macAddress": "e4:a7:c5:be:e9:44",
+        "mapInfo": {
+            "mapHierarchyString": "System Campus>UNIT.Factory>2nd_Floor>2nd_floor",
+            "floorRefId": "735495909441273979",
+            "floorDimension": {
+                "length": 771,
+                "width": 1551,
+                "height": 10,
+                "offsetX": 0,
+                "offsetY": 0,
+                "unit": "FEET"
+            },
+            "image": {
+                "imageName": "domain_4_1513769867616.png",
+                "zoomLevel": 5,
+                "width": 2216,
+                "height": 1126,
+                "size": 2216,
+                "maxResolution": 16,
+                "colorDepth": 8
+            }
+        },
+        "mapCoordinate": {
+            "x": 787.21423,
+            "y": 372.71494,
+            "z": 0,
+            "unit": "FEET"
+        },
+        "currentlyTracked": true,
+        "confidenceFactor": 112,
+        "statistics": {
+            "currentServerTime": "2018-07-29T15:27:51.521+0300",
+            "firstLocatedTime": "2018-07-29T13:58:20.908+0300",
+            "lastLocatedTime": "2018-07-29T15:27:41.469+0300",
+            "maxDetectedRssi": {
+                "apMacAddress": "00:27:e3:b1:de:40",
+                "band": "IEEE_802_11_B",
+                "slot": 0,
+                "rssi": -67,
+                "antennaIndex": 0,
+                "lastHeardInSeconds": 3
+            }
+        },
+        "historyLogReason": null,
+        "geoCoordinate": null,
+        "rawLocation": {
+            "rawX": -999,
+            "rawY": -999,
+            "unit": "FEET"
+        },
+        "networkStatus": "ACTIVE",
+        "changedOn": 1532867261469,
+        "ipAddress": [
+            "10.87.89.30",
+            "fe80:0000:0000:0000:e6a7:c5ff:febe:e944"
+        ],
+        "userName": "",
+        "ssId": "UNIT Factory (public)",
+        "sourceTimestamp": null,
+        "band": "IEEE_802_11_B",
+        "apMacAddress": "a0:23:9f:2d:f2:a0",
+        "dot11Status": "ASSOCIATED",
+        "manufacturer": null,
+        "areaGlobalIdList": [
+            16,
+            3,
+            2,
+            1,
+            7,
+            8,
+            27,
+            28
+        ],
+        "detectingControllers": "10.51.1.240",
+        "bytesSent": 11848168,
+        "bytesReceived": 712294,
+        "guestUser": false
+    },
